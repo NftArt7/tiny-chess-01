@@ -1,6 +1,6 @@
 # tiny-chess-01 — golf13 "The Brawler"
 
-A 4 KB chess engine (packed `main.py`, 4,013 bytes of the 4,096 limit).
+A 4 KB chess engine (packed `main.py`, 3,279 bytes of the 4,096 limit).
 
 - 0x88 board, alpha-beta + quiescence (captures-only when not in check)
 - Iterative deepening to a fixed 60,000 nodes/move (deterministic replay)
@@ -47,13 +47,13 @@ well as character. A/B self-play vs golf12 at ND=8,000: 4W 5D 3L (+29).
   over 50 random games (tempo-aware check).
 - Packed `main.py` and source choose the same root move at startpos
   (b1c3, 60,000 nodes).
-- Snapshot 6,653 / 8,192 bytes.
+- Snapshot 7,036 / 8,192 bytes.
 
 ## Layout
 
-- `main.py` — packed engine (lzma-alone preset 9 + base85)
+- `main.py` — packed engine (kit `makefun compress` of golf13.py)
 - `LICENSE` — MIT (`SPDX-License-Identifier: MIT` first line)
 - `README.md` — this file
 
 Source: `~/workspace/makefun/dev/golf13.py` (7,050 bytes, packed by
-`~/workspace/makefun/dev/pack.py`).
+the kit's `makefun compress`).
